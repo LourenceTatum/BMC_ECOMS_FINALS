@@ -1,17 +1,36 @@
-# bmc_final
+# bmc_final — BMC Commerce Flutter App
 
-A new Flutter project.
+The Flutter client for the **BMC Commerce** gothic luxury streetwear store
+(Philippines · PHP · Supabase · Xendit).
 
-## Getting Started
+> **Engineering foundation**: the repository root (`../`) contains the project's
+> governing docs. **Read `../AGENTS.md` before working in this app**, then
+> `../docs/` as needed. Implementation is phased — see
+> `../docs/IMPLEMENTATION_ROADMAP.md`. The current code is the Flutter starter
+> template; the app itself is built in later phases.
 
-This project is a starting point for a Flutter application.
+## Quick start (Windows)
 
-A few resources to get you started if this is your first Flutter project:
+```powershell
+flutter pub get
+flutter run --dart-define=SUPABASE_URL=https://<ref>.supabase.co `
+  --dart-define=SUPABASE_ANON_KEY=<anon-key>
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Client config (URL + anon key) is **publishable only** — see
+`../docs/SECURITY.md`. No provider or service-role secrets belong here.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Checks
+
+```powershell
+dart format .
+flutter analyze
+flutter test
+```
+
+## References
+
+- Engineering rulebook: `../AGENTS.md` · Claude guidance: `../CLAUDE.md`
+- Project overview: `../docs/PROJECT_OVERVIEW.md`
+- Features/UI/architecture/database/payments docs: `../docs/`
+- Skills: `../.claude/skills/`
